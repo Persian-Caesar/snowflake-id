@@ -1,17 +1,27 @@
-import {hexToDec} from './hex2dec';
+import { hexToDec } from './hex2dec';
+
+export interface SnowflakeOption {
+  mid?: number;
+  offset?: number;
+}
 
 export default class Snowflake {
-  constructor(options) {
+
+  private seq: number;
+  private mid: number;
+  private offset: number;
+  private lastTime: number;
+  constructor(options: SnowflakeOption) {
     options = options || {};
     this.seq = 0;
     this.mid = (options.mid || 1) % 1023;
     this.offset = options.offset || 0;
     this.lastTime = 0;
   }
-  
+
   generate() {
-    const time = Date.now(),
-    bTime = (time - this.offset).toString(2);
+    const time = Date.now();
+    const bTime = (time - this.offset).toString(2);
 
     // get the sequence number
     if (this.lastTime == time) {
@@ -21,9 +31,11 @@ export default class Snowflake {
         this.seq = 0;
 
         // make system wait till time is been shifted by one millisecond
-        while (Date.now() <= time) {}
+        while (Date.now() <= time) { }
       }
-    } else {
+    }
+
+    else {
       this.seq = 0;
     }
 
@@ -33,9 +45,11 @@ export default class Snowflake {
       bMid = this.mid.toString(2);
 
     // create sequence binary bit
-    while (bSeq.length < 12) bSeq = "0" + bSeq;
+    while (bSeq.length < 12)
+      bSeq = "0" + bSeq;
 
-    while (bMid.length < 10) bMid = "0" + bMid;
+    while (bMid.length < 10)
+      bMid = "0" + bMid;
 
     const bid = bTime + bMid + bSeq;
     let id = "";

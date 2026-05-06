@@ -15,10 +15,10 @@ npm install snowflake-id
 ### initialization
 
 ```js
-var SnowflakeId = require('snowflake-id');
+const { default: Snowflake } = require('snowflake-id');
 
 // Initialize snowflake
-var snowflake = new SnowflakeId({
+const snowflake = new Snowflake({
     mid : 42,
     offset : (2019-1970)*31536000*1000
 });
@@ -29,8 +29,8 @@ Create a instance of snowflake as shown above which will be used to generate sno
 ### Snowflake ID generation
 
 ```js
-var id1 = snowflake.generate(); // returns something along the lines of "285124269753503744"
-var id2 = snowflake.generate(); // returns something along the lines of "285124417543999488"
+const id1 = snowflake.generate(); // returns something along the lines of "285124269753503744"
+const id2 = snowflake.generate(); // returns something along the lines of "285124417543999488"
 ```
 
 ## Options
