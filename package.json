@@ -1,5 +1,5 @@
 {
-  "name": "snowflake-id",
+  "name": "@persian-caesar/snowflake-id",
   "version": "1.3.0",
   "description": "Time based 64-bit unique id generator, inspired by Twitter snowflakes.",
   "main": "./dist/index.js",
