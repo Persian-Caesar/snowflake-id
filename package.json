@@ -3,7 +3,6 @@
   "version": "1.3.0",
   "description": "Time based 64-bit unique id generator, inspired by Twitter snowflakes.",
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
