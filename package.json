@@ -1,6 +1,6 @@
 {
   "name": "snowflake-id",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Time based 64-bit unique id generator, inspired by Twitter snowflakes",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -15,14 +15,15 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thetetrabyte/snowflake-id/issues"
+    "url": "https://github.com/Sobhan-SRZA/snowflake/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thetetrabyte/snowflake-id.git"
+    "url": "git+https://github.com/Sobhan-SRZA/snowflake.git"
   },
   "keywords": [
     "snowflake",
+    "snowflake-id",
     "flake",
     "unique",
     "id",
@@ -31,12 +32,9 @@
     "id",
     "generator"
   ],
-  "homepage": "https://github.com/thetetrabyte/snowflake-id#readme",
+  "homepage": "https://github.com/Sobhan-SRZA/snowflake#readme",
   "devDependencies": {
     "@types/node": "^22.19.17",
     "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "aparat.js": "^0.1.2"
   }
 }
