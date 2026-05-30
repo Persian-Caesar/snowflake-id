@@ -1,6 +1,6 @@
 {
   "name": "@persian-caesar/snowflake-id",
-  "version": "1.4.1",
+  "version": "1.4.0",
   "description": "High performance Snowflake ID generator for TypeScript (Twitter/Discord style)",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
