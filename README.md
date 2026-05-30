@@ -1,8 +1,15 @@
-# Snowflake ID TS
+# @Persian-Caesar/Snowflake-ID
 
 **A modern, flexible, and high-performance Snowflake ID generator for TypeScript and JavaScript.**
 
 Inspired by Twitter Snowflake and Discord's ID system, this library gives you full control over ID length, format, and structure while maintaining **near-zero collision** guarantees.
+
+---
+
+## 🌐 Documentation
+
+- **English** → [README.md](README.md) `This file.`
+- **فارسی** → [README.fa.md](README.fa.md)
 
 ---
 
@@ -60,16 +67,16 @@ console.log(discordStyle.generate());
 
 ## ⚙️ Configuration Options
 
-| Option           | Type     | Default | Description |
-|------------------|----------|---------|-----------|
-| `timeBits`       | `number` | 42      | Bits for timestamp (higher = longer lifespan) |
-| `workerBits`     | `number` | 10      | Bits for worker/node ID |
-| `seqBits`        | `number` | 12      | Bits for sequence per millisecond |
-| `epoch`          | `number` | 0       | Custom epoch (ms) - highly recommended |
-| `workerId`       | `number` | 1       | Unique ID for this instance |
-| `base62`         | `boolean`| false   | Use Base62 encoding (short & URL-safe) |
-| `base36`         | `boolean`| false   | Use Base36 encoding |
-| `customAlphabet` | `string` | ...     | Custom character set for encoding |
+| Option           | Type      | Default | Description                                   |
+| ---------------- | --------- | ------- | --------------------------------------------- |
+| `timeBits`       | `number`  | 42      | Bits for timestamp (higher = longer lifespan) |
+| `workerBits`     | `number`  | 10      | Bits for worker/node ID                       |
+| `seqBits`        | `number`  | 12      | Bits for sequence per millisecond             |
+| `epoch`          | `number`  | 0       | Custom epoch (ms) - highly recommended        |
+| `workerId`       | `number`  | 1       | Unique ID for this instance                   |
+| `base62`         | `boolean` | false   | Use Base62 encoding (short & URL-safe)        |
+| `base36`         | `boolean` | false   | Use Base36 encoding                           |
+| `customAlphabet` | `string`  | ...     | Custom character set for encoding             |
 
 **Total bits must not exceed 64.**
 
@@ -192,12 +199,12 @@ This library is optimized for high throughput:
 
 ## 📊 Bit Allocation Examples
 
-| Use Case           | timeBits | workerBits | seqBits | Approx. Length (Base62) | Lifespan     |
-|--------------------|----------|------------|---------|-------------------------|--------------|
-| Twitter Style      | 41       | 5          | 18      | 18-19 chars             | ~69 years    |
-| Discord Style      | 38       | 8          | 10      | 12-13 chars             | ~8.5 years   |
-| Short IDs          | 32       | 6          | 8       | 9-10 chars              | ~136 years   |
-| Ultra Short        | 30       | 5          | 8       | 8-9 chars               | ~34 years    |
+| Use Case      | timeBits | workerBits | seqBits | Approx. Length (Base62) | Lifespan   |
+| ------------- | -------- | ---------- | ------- | ----------------------- | ---------- |
+| Twitter Style | 41       | 5          | 18      | 18-19 chars             | ~69 years  |
+| Discord Style | 38       | 8          | 10      | 12-13 chars             | ~8.5 years |
+| Short IDs     | 32       | 6          | 8       | 9-10 chars              | ~136 years |
+| Ultra Short   | 30       | 5          | 8       | 8-9 chars               | ~34 years  |
 
 ---
 
